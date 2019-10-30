@@ -1,0 +1,51 @@
+from cs50 import get_string
+from sys import argv
+import sys
+# Words in dictionary
+
+def main():
+    sys.argv
+    if len(sys.argv) < 2 or len(sys.argv) > 2:
+        print("Usage: python bleep.py dictionary")
+        exit(1)
+    else:
+
+     banned = sys.argv[1]
+     print(banned)
+     word = get_string("What message would you like to censor?")
+
+
+    def load(banned):
+
+        """Load dictionary into memory, returning true if successful else false"""
+        words = set()
+        file = open(banned, "r")
+        for line in file:
+            words.add(line.rstrip("\n"))
+            print(words)
+        file.close()
+
+        return True
+
+
+    def check(word):
+        """Return true if word is in dictionary else false"""
+
+        return word.lower() in words
+        print(word)
+
+    def size():
+        """Returns number of words in dictionary if loaded else 0 if not yet loaded"""
+        return len(words)
+
+    def unload():
+        """Unloads dictionary from memory, returning true if successful else false"""
+        return True
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+# https://yuanann.pixnet.net/blog/post/23211833
